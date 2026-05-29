@@ -124,8 +124,8 @@ if (typeof gsap !== 'undefined') {
 
     // Floating animation for home image container
     gsap.to(".home-img", {
-        y: -20,
-        duration: 3,
+        y: -12,
+        duration: 4,
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut"
@@ -167,11 +167,11 @@ if (typeof gsap !== 'undefined') {
         });
     }
 
-    // Process Timeline Animation
+    // Process Timeline Animation (Home Page)
     const lifecycleItems = document.querySelectorAll(".lifecycle-item");
-    const progressFill = document.querySelector(".progress-fill");
+    const homeProgressFill = document.querySelector(".lifecycle-container .progress-fill");
 
-    if (lifecycleItems.length > 0 && progressFill) {
+    if (lifecycleItems.length > 0 && homeProgressFill) {
         ScrollTrigger.create({
             trigger: ".lifecycle-container",
             start: "top 80%",
@@ -184,35 +184,32 @@ if (typeof gsap !== 'undefined') {
                 });
 
                 // Animate progress line
-                progressFill.style.height = "100%";
+                homeProgressFill.style.height = "100%";
             },
             once: true
         });
     }
 
-    // Project Detail Timeline & Graph Animation
+    // Project Detail Timeline Animation
     const detailTimelineItems = document.querySelectorAll(".detail-timeline-item");
-    const barFills = document.querySelectorAll(".bar-fill");
+    const detailProgressFill = document.querySelector(".detail-timeline .progress-fill");
 
-    if (detailTimelineItems.length > 0 || barFills.length > 0) {
+    if (detailTimelineItems.length > 0) {
         ScrollTrigger.create({
             trigger: ".project-detail-section",
             start: "top 80%",
             onEnter: () => {
-                // Animate detail timeline
+                // Animate detail timeline items
                 detailTimelineItems.forEach((item, i) => {
                     setTimeout(() => {
                         item.classList.add("visible");
                     }, i * 200);
                 });
 
-                // Animate bar chart
-                barFills.forEach(bar => {
-                    const height = bar.getAttribute("style")?.match(/height: (\d+)%/)?.[1] || 0;
-                    setTimeout(() => {
-                        bar.style.height = height + "%";
-                    }, 500);
-                });
+                // Animate detail progress line
+                if (detailProgressFill) {
+                    detailProgressFill.style.height = "100%";
+                }
             },
             once: true
         });
