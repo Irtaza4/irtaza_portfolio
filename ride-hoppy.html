@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div id="particles-js"></div>
 
     <!-- header design -->
     <header class="header">
@@ -29,120 +30,190 @@
             <a href="index.html#contact">Contact</a>
         </nav>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section class="about" id="portfolio" style="margin-top: 8rem;">
-        <div class="about-content" style="text-align: left;">
-            <h2 class="heading" style="text-align: left;">Ride <span>Hoppy</span></h2>
-            <h3>Free Corporate Ride Sharing Platform</h3>
+    <section class="project-detail-section" id="portfolio">
+        <div class="about-content" style="text-align: left; max-width: 1100px; margin: 0 auto;">
+            <div class="project-header">
+                <h2 class="heading" style="text-align: left; margin-bottom: 0.5rem; font-size: 3.2rem;">Ride <span>Hoppy</span></h2>
+                <h3 style="font-size: 2rem; color: var(--main-color); margin-bottom: 2rem;">Free Corporate Ride Sharing Platform</h3>
+            </div>
 
-            <p style="margin-bottom: 2rem;">
+            <p class="project-description">
                 Ride Hoppy is a two-sided mobile application solution designed to connect passengers with corporate
-                employees who are willing to offer free rides during their daily commute. The platform promotes
-                community-based transport, reduces commuting costs, and encourages corporate social responsibility.
+                employees who are willing to offer free rides during their daily commute.
             </p>
 
             <!-- Main Hero Image -->
-            <img src="images/New Project (1).png" alt="Ride Hoppy Main Interface"
-                style="display: block; margin: 0 auto 4rem auto; width: 100%; max-width: 600px; height: auto; border-radius: 1rem; object-fit: cover;">
+            <div class="hero-img-container">
+                <img src="images/New Project (1).png" alt="Ride Hoppy Main Interface" style="max-width: 500px;">
+            </div>
 
 
             <!-- The Challenge Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">The Challenge</h3>
+            <div class="project-section">
+                <h3><i class='bx bx-target-lock'></i> The Challenge</h3>
                 <p>
                     For many corporate employees, the daily commute is a significant source of stress and expense.
-                    Public
-                    transport can be unreliable or crowded, while ride-hailing services like Uber or Careem become
-                    prohibitively expensive for daily travel. Furthermore, large organizations often suffer from
-                    "silos," where employees rarely interact with colleagues outside their immediate teams. There was a
-                    need for a solution that could solve the mobility problem while simultaneously building a stronger
-                    corporate community.
+                    Public transport can be unreliable, while ride-hailing services become prohibitively expensive.
                 </p>
             </div>
 
             <!-- The Solution Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">The Solution</h3>
-                <p style="margin-bottom: 2rem;">
+            <div class="project-section">
+                <h3><i class='bx bx-bulb'></i> The Solution</h3>
+                <p style="margin-bottom: 1.5rem;">
                     <strong>Ride Hoppy</strong> bridges this gap by creating a trusted, internal ride-sharing network.
-                    Unlike commercial platforms, Ride Hoppy is exclusive to corporate employees, ensuring a high level
-                    of
-                    safety and trust. The app operates on a "freemium" community model where rides are free, fostering a
-                    culture of helping one another.
+                    Rides are free, fostering a culture of mutual support.
                 </p>
                 <p>
-                    The system consists of two distinct interfaces: the <strong>Driver App</strong> for those with
-                    vehicles,
-                    and the <strong>Rider App</strong> for passengers seeking a lift. By matching routes and schedules,
-                    we optimize empty seats and reduce the total number of vehicles on the road.
+                    The system consists of two distinct interfaces: the <strong>Driver App</strong> and the <strong>Rider App</strong>.
                 </p>
             </div>
 
             <!-- Detailed Features Section -->
-            <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 2rem;">Core Experience</h3>
-            <div style="display: flex; gap: 4rem; flex-wrap: wrap; margin-bottom: 4rem;">
-                <div style="flex: 1; min-width: 250px;">
-                    <h4 style="font-size: 2rem; color: var(--main-color); margin-bottom: 1rem;">For Drivers (Providers)
-                    </h4>
-                    <ul style="font-size: 1.6rem; list-style: none;">
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Route & Schedule:</strong> Easily set daily commute routes and available
-                                timings.</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Request Management:</strong> View rider profiles and accept/reject requests
-                                based on convenience.</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Verification:</strong> Corporate email verification ensures only legitimate
-                                colleagues can join.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div style="flex: 1; min-width: 250px;">
-                    <h4 style="font-size: 2rem; color: var(--main-color); margin-bottom: 1rem;">For Riders (Passengers)
-                    </h4>
-                    <ul style="font-size: 1.6rem; list-style: none;">
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Smart Matching:</strong> Find drivers passing near your location at the right
-                                time.</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Live Tracking:</strong> Real-time map tracking to know exactly when your ride
-                                arrives.</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Safety First:</strong> View driver ratings and verified profiles before
-                                booking.</span>
-                        </li>
-                    </ul>
+            <div class="project-section">
+                <h3><i class='bx bx-list-check'></i> Core Experience</h3>
+                <div class="feature-list">
+                    <div class="feature-column">
+                        <h4>For Drivers</h4>
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Route & Schedule:</strong> Easily set daily commute routes and available timings.</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Verification:</strong> Corporate email verification ensures safety.</span>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <h4>For Riders</h4>
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Smart Matching:</strong> Find drivers passing near your location instantly.</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Live Tracking:</strong> Real-time map tracking for your ride.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Impact Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">Project Impact</h3>
+            <!-- Impact Section with Visual Graphs -->
+            <div class="project-section">
+                <h3><i class='bx bx-trending-up'></i> Project Impact & Statistics</h3>
                 <p>
-                    By facilitating carpooling, Ride Hoppy directly impacts the organization's carbon footprint,
-                    supports
-                    green initiatives, and significantly lowers commuting costs for junior employees. Beyond the
-                    metrics, it serves as a powerful networking tool, allowing employees from different departments—who
-                    might never meet otherwise—to connect during their ride.
+                    Ride Hoppy directly impacts the organization's carbon footprint and lowers commuting costs.
                 </p>
+                
+                <div class="stats-grid">
+                    <!-- Bar Chart Stats
+                    <div class="chart-card">
+                        <h4>Monthly Rides</h4>
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <span>Jan</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="height: 40%;"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <span>Feb</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="height: 55%;"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <span>Mar</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="height: 65%;"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <span>Apr</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="height: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <span>May</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="height: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metric Cards -->
+                    <div class="metrics-container vertical">
+                        <div class="metric-card">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">CO2 Saved</span>
+                            <div class="progress-graph">
+                                <div class="progress-bar" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">Free</span>
+                            <span class="metric-label">Commute Cost</span>
+                            <div class="progress-graph">
+                                <div class="progress-bar" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">15K+</span>
+                            <span class="metric-label">Total Rides</span>
+                            <div class="progress-graph">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p style="margin-top: 2rem;">
-                <strong>Note:</strong> Although rides are free to encourage usage, passengers have the option to tip the
-                driver as a gesture of appreciation.
+            <!-- Project Timeline Section -->
+            <div class="project-section">
+                <h3><i class='bx bx-time'></i> Project Development Timeline</h3>
+                <div class="detail-timeline">
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 1</span>
+                            <h4>Research & Discovery</h4>
+                            <p>Conducted user interviews, market research, and defined project scope with client requirements.</p>
+                        </div>
+                    </div>
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 2</span>
+                            <h4>UI/UX Design</h4>
+                            <p>Created wireframes, prototypes, and final app screens for both Driver and Rider apps.</p>
+                        </div>
+                    </div>
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 3</span>
+                            <h4>Development</h4>
+                            <p>Built the application using Flutter & Firebase, implementing real-time features.</p>
+                        </div>
+                    </div>
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 4</span>
+                            <h4>Testing & Launch</h4>
+                            <p>Conducted beta testing, fixed bugs, and launched on App Store & Play Store.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 1rem; font-size: 1.3rem; color: #94a3b8; font-style: italic;">
+                <strong>Note:</strong> Rides are free, with optional tipping for appreciation.
             </p>
 
             <!-- Phone Carousel for Sign Up Flow -->
@@ -228,8 +299,12 @@
         </div>
     </footer>
 
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- particles js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- custom js -->
     <script src="js/script.js"></script>

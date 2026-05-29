@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div id="particles-js"></div>
 
     <!-- header design -->
     <header class="header">
@@ -28,124 +29,166 @@
             <a href="index.html#contact">Contact</a>
         </nav>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section class="about" id="portfolio" style="margin-top: 8rem;">
-        <div class="about-content" style="text-align: left;">
-            <h2 class="heading" style="text-align: left;">Curio <span>Campus</span></h2>
-            <h3>Peer-to-Peer Collaboration & Emergency Support Platform</h3>
+    <section class="project-detail-section" id="portfolio">
+        <div class="about-content" style="text-align: left; max-width: 1100px; margin: 0 auto;">
+            <div class="project-header">
+                <h2 class="heading" style="text-align: left; margin-bottom: 0.5rem; font-size: 3.2rem;">Curio <span>Campus</span></h2>
+                <h3 style="font-size: 2rem; color: var(--main-color); margin-bottom: 2rem;">Peer-to-Peer Collaboration & Emergency Support Platform</h3>
+            </div>
 
-            <p style="margin-bottom: 2rem;">
+            <p class="project-description">
                 Curio Campus is a sophisticated ecosystem designed to foster seamless collaboration and instant
                 peer-to-peer assistance. By bridging the gap between individuals seeking help and those with relevant
                 expertise, the platform transforms communities into self-sustaining support networks.
             </p>
 
             <!-- Main Hero Image -->
-            <img src="images/curio_campus_logo.png" alt="Curio Campus Logo"
-                style="display: block; margin: 0 auto 4rem auto; width: 100%; max-width: 400px; height: auto; border-radius: 1rem; object-fit: contain;">
+            <div class="hero-img-container">
+                <img src="images/curio_campus_logo.png" alt="Curio Campus Logo" style="max-width: 250px;">
+            </div>
 
 
             <!-- The Challenge Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">The Challenge</h3>
+            <div class="project-section">
+                <h3><i class='bx bx-target-lock'></i> The Challenge</h3>
                 <p>
                     In academic and professional environments, productivity often stalls due to specialized hurdles.
                     Standard communication tools lack the urgency or the filtering needed to find specific skill sets
-                    instantly. Students and professionals frequently find themselves "stuck"—unable to move forward
-                    simply because they don't know who around them has the expertise to help. The challenge was to
-                    create a platform that could match needs with skills in real-time, especially for time-critical
-                    tasks.
+                    instantly. The challenge was to create a platform that could match needs with skills in real-time,
+                    especially for time-critical tasks.
                 </p>
             </div>
 
             <!-- The Solution Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">The Solution</h3>
-                <p style="margin-bottom: 2rem;">
-                    <strong>Curio Campus</strong> solves this by implementing a skill-driven matching engine. Instead of
-                    broadly asking for help, users broadcast "Skill-Based Help Requests" that are pushed directly to
-                    peers with the corresponding tags.
+            <div class="project-section">
+                <h3><i class='bx bx-bulb'></i> The Solution</h3>
+                <p style="margin-bottom: 1.5rem;">
+                    <strong>Curio Campus</strong> solves this by implementing a skill-driven matching engine. Users
+                    broadcast help requests that are pushed directly to peers with corresponding expertise.
                 </p>
                 <p>
                     The platform integrates specialized communication verticals—supporting everything from simple chat
-                    to full-scale video calls and group collaboration. By focusing on <strong>Emergency
-                        Support</strong>,
-                    the app ensures that users get moving again quickly, whether they are troubleshooting code,
-                    finalizing a project, or requiring urgent professional advice.
+                    to full-scale video calls and group collaboration.
                 </p>
             </div>
 
             <!-- Key Features Section -->
-            <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 2rem;">Core Capabilities</h3>
-            <div style="display: flex; gap: 4rem; flex-wrap: wrap; margin-bottom: 4rem;">
-                <div style="flex: 1; min-width: 250px;">
-                    <ul style="font-size: 1.6rem; list-style: none;">
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Emergency Help Engine:</strong> Priority posting system that notifies matched
-                                peers within seconds.</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Rich Communication:</strong> End-to-end messaging, voice calling, and HD video
-                                calling built for collaborative work.</span>
-                        </li>
-                    </ul>
+            <div class="project-section">
+                <h3><i class='bx bx-list-check'></i> Core Capabilities</h3>
+                <div class="feature-list">
+                    <div class="feature-column">
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Emergency Help Engine:</strong> Priority posting system that notifies matched peers within seconds.</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Rich Communication:</strong> End-to-end messaging, voice calling, and HD video calling.</span>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Dynamic Skill Discovery:</strong> Advanced tagging system for finding expertise instantly.</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Integrated Management:</strong> Track subtasks and manage team deadlines within the app.</span>
+                        </div>
+                    </div>
                 </div>
-                <div style="flex: 1; min-width: 250px;">
-                    <ul style="font-size: 1.6rem; list-style: none;">
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Dynamic Skill Discovery:</strong> Advanced tagging system that allows users to
-                                find the right person for the right task instantly.</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 1rem;">
-                            <i class='bx bx-check-circle' style="color: var(--main-color); margin-top: .4rem;"></i>
-                            <span><strong>Integrated Management:</strong> Track subtasks, assign responsibilities, and
-                                manage team deadlines within the app.</span>
-                        </li>
-                    </ul>
+            </div>
+
+            <!-- Impact Section with Visual Graphs -->
+            <div class="project-section">
+                <h3><i class='bx bx-trending-up'></i> Project Impact & Statistics</h3>
+                <p>
+                    Curio Campus reduces the "time-to-expertise"—the duration it takes for someone to get help when
+                    facing a specialized problem.
+                </p>
+                
+                <div class="stats-grid">
+                    <!-- Metric Cards -->
+                    <div class="metrics-container vertical">
+                        <div class="metric-card">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Efficiency Boost</span>
+                            <div class="progress-graph">
+                                <div class="progress-bar" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">2s</span>
+                            <span class="metric-label">Match Time</span>
+                            <div class="progress-graph">
+                                <div class="progress-bar" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">15K+</span>
+                            <span class="metric-label">Peer Connections</span>
+                            <div class="progress-graph">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Timeline Section -->
+            <div class="project-section">
+                <h3><i class='bx bx-time'></i> Project Development Timeline</h3>
+                <div class="detail-timeline">
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 1</span>
+                            <h4>Ideation & Research</h4>
+                            <p>Identified gaps in existing collaboration tools and conducted user research.</p>
+                        </div>
+                    </div>
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 2</span>
+                            <h4>Design & Prototyping</h4>
+                            <p>Created user flows, wireframes, and interactive prototypes for testing.</p>
+                        </div>
+                    </div>
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 3</span>
+                            <h4>Full Stack Development</h4>
+                            <p>Built the app with Flutter & Firebase, implementing real-time messaging and matching.</p>
+                        </div>
+                    </div>
+                    <div class="detail-timeline-item">
+                        <div class="detail-timeline-dot"></div>
+                        <div class="detail-timeline-content">
+                            <span class="detail-timeline-date">Phase 4</span>
+                            <h4>Testing & Deployment</h4>
+                            <p>Conducted internal testing, fixed bugs, and prepared for official launch.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Technical Stack Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">Technical Implementation
-                </h3>
-                <p style="margin-bottom: 2rem;">
-                    The application was built using <strong>Flutter</strong> to deliver a high-performance
-                    cross-platform
-                    experience. On the backend, <strong>Firebase</strong> provides the real-time backbone, with
-                    <strong>FCM
-                        (Firebase Cloud Messaging)</strong> ensuring delivery of instant alerts for emergency requests
-                    and incoming collab calls.
+            <div class="project-section">
+                <h3><i class='bx bx-code-alt'></i> Technical Implementation</h3>
+                <p style="margin-bottom: 1rem;">
+                    Built using <strong>Flutter</strong> and <strong>Firebase</strong> for a high-performance
+                    real-time experience.
                 </p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <span
-                        style="background: var(--bg-color); border: 1px solid var(--main-color); padding: .5rem 1.5rem; border-radius: 2rem; font-size: 1.4rem;">Flutter</span>
-                    <span
-                        style="background: var(--bg-color); border: 1px solid var(--main-color); padding: .5rem 1.5rem; border-radius: 2rem; font-size: 1.4rem;">Firebase</span>
-                    <span
-                        style="background: var(--bg-color); border: 1px solid var(--main-color); padding: .5rem 1.5rem; border-radius: 2rem; font-size: 1.4rem;">Clean
-                        Architecture</span>
-                    <span
-                        style="background: var(--bg-color); border: 1px solid var(--main-color); padding: .5rem 1.5rem; border-radius: 2rem; font-size: 1.4rem;">Real-time
-                        Messaging</span>
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Clean Architecture</span>
                 </div>
-            </div>
-
-            <!-- Project Impact Section -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 2.6rem; color: var(--text-color); margin-bottom: 1.5rem;">The Impact</h3>
-                <p>
-                    Curio Campus reduces the "time-to-expertise"—the duration it takes for someone to get help when
-                    facing a specialized problem. By gamifying skill discovery and facilitating instant connections, it
-                    not only gets work done faster but also builds stronger social capital within professional and
-                    student cohorts. It's more than just an app; it's a community-driven accelerator for productivity.
-                </p>
             </div>
 
             <!-- App Interaction (Placeholder for now) -->
@@ -194,8 +237,12 @@
         </div>
     </footer>
 
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- particles js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- custom js -->
     <script src="js/script.js"></script>
