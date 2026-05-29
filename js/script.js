@@ -27,17 +27,13 @@ window.onscroll = () => {
         };
     });
 
-
     /*========== sticky navbar ==========*/
     let header = document.querySelector('.header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
-
 
     /*========== remove menu icon navbar when click navbar link (scroll) ==========*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-
 };
 
 
@@ -60,29 +56,186 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
 }
 
 
-/*========== dark light mode ==========*/
-let darkModeIcon = document.querySelector('#darkMode-icon');
+/*========== sticky navbar ==========*/
+if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+        "particles": {
+            "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#0ea5e9" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.2, "random": false },
+            "size": { "value": 2, "random": true },
+            "line_linked": { "enable": true, "distance": 150, "color": "#0ea5e9", "opacity": 0.1, "width": 1 },
+            "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+            "modes": { "bubble": { "distance": 200, "size": 4, "duration": 2, "opacity": 0.8, "speed": 3 }, "push": { "particles_nb": 4 } }
+        },
+        "retina_detect": true
+    });
+}
 
-darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toggle('bx-sun');
-    document.body.classList.toggle('dark-mode');
-};
+/*========== GSAP Animations ==========*/
+if (typeof gsap !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Hero Section Animations
+    const tl = gsap.timeline();
 
-/*========== scroll reveal ==========*/
-if (typeof ScrollReveal !== 'undefined') {
-    ScrollReveal({
-        // reset: true,
-        distance: '80px',
-        duration: 2000,
-        delay: 200
+    tl.from(".home-content h3", { duration: 0.8, y: 30, opacity: 0, ease: "power3.out" })
+      .from(".home-content h1", { duration: 1, y: 30, opacity: 0, ease: "power3.out" }, "-=0.4")
+      .from(".text-animate h3", { duration: 0.8, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+      .from(".home-content p", { duration: 0.8, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+      .from(".btn-group", { duration: 0.8, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+      .from(".social-media a", { duration: 0.8, scale: 0, opacity: 0, stagger: 0.1, ease: "back.out(1.7)" }, "-=0.6")
+      .from(".home-img .img-box", { duration: 1.5, scale: 0.8, opacity: 0, ease: "power3.out" }, "-=1");
+
+    // Section Headings
+    gsap.utils.toArray(".heading").forEach(heading => {
+        gsap.from(heading, {
+            scrollTrigger: {
+                trigger: heading,
+                start: "top 90%",
+            },
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            ease: "power3.out"
+        });
     });
 
-    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-    ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
-    ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
-    ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+    // Cards reveal
+    const cards = gsap.utils.toArray(".services-box, .portfolio-box, .skills-box, .card");
+    cards.forEach((card, i) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 90%",
+            },
+            duration: 0.8,
+            y: 40,
+            opacity: 0,
+            ease: "power3.out",
+            delay: (i % 3) * 0.1
+        });
+    });
+
+    // Floating animation for home image container
+    gsap.to(".home-img", {
+        y: -20,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+    });
+
+    // Project Detail Page Animations
+    if (document.querySelector(".project-header")) {
+        gsap.to(".project-header", { duration: 0.8, y: 0, opacity: 1, ease: "power3.out", delay: 0.2 });
+        gsap.to(".project-description", { duration: 0.8, y: 0, opacity: 1, ease: "power3.out", delay: 0.3 });
+        gsap.to(".hero-img-container", { duration: 1, scale: 1, opacity: 1, ease: "back.out(1.2)", delay: 0.4 });
+        
+        gsap.utils.toArray(".project-section").forEach((section, i) => {
+            gsap.to(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 90%",
+                },
+                duration: 0.8,
+                y: 0,
+                opacity: 1,
+                ease: "power3.out",
+                delay: i * 0.1
+            });
+        });
+
+        // Animate progress bars in metrics
+        gsap.utils.toArray(".progress-bar").forEach(bar => {
+            gsap.to(bar, {
+                scrollTrigger: {
+                    trigger: bar,
+                    start: "top 95%",
+                },
+                width: bar.style.width,
+                duration: 1.5,
+                ease: "power2.out"
+            });
+            // Reset width to 0 for initial state if not already handled by CSS
+            bar.style.width = "0";
+        });
+    }
+
+    // Process Timeline Animation
+    const lifecycleItems = document.querySelectorAll(".lifecycle-item");
+    const progressFill = document.querySelector(".progress-fill");
+
+    if (lifecycleItems.length > 0 && progressFill) {
+        ScrollTrigger.create({
+            trigger: ".lifecycle-container",
+            start: "top 80%",
+            onEnter: () => {
+                // Animate items
+                lifecycleItems.forEach((item, i) => {
+                    setTimeout(() => {
+                        item.classList.add("visible");
+                    }, i * 150);
+                });
+
+                // Animate progress line
+                progressFill.style.height = "100%";
+            },
+            once: true
+        });
+    }
+
+    // Project Detail Timeline & Graph Animation
+    const detailTimelineItems = document.querySelectorAll(".detail-timeline-item");
+    const barFills = document.querySelectorAll(".bar-fill");
+
+    if (detailTimelineItems.length > 0 || barFills.length > 0) {
+        ScrollTrigger.create({
+            trigger: ".project-detail-section",
+            start: "top 80%",
+            onEnter: () => {
+                // Animate detail timeline
+                detailTimelineItems.forEach((item, i) => {
+                    setTimeout(() => {
+                        item.classList.add("visible");
+                    }, i * 200);
+                });
+
+                // Animate bar chart
+                barFills.forEach(bar => {
+                    const height = bar.getAttribute("style")?.match(/height: (\d+)%/)?.[1] || 0;
+                    setTimeout(() => {
+                        bar.style.height = height + "%";
+                    }, 500);
+                });
+            },
+            once: true
+        });
+    }
 }
+
+/*========== Tilt.js initialization ==========*/
+if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(document.querySelectorAll(".services-box, .portfolio-box"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+    });
+}
+
+/*========== scroll reveal ==========*/
+// Disabled in favor of GSAP
+/*
+if (typeof ScrollReveal !== 'undefined') {
+    ...
+}
+*/
 
 /*========== phone carousel ==========*/
 /*========== phone carousel ==========*/
