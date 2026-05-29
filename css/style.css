@@ -812,9 +812,146 @@ span {
 
 /* Responsive for mobile */
 @media (max-width: 768px) {
+    /* ============== General ============== */
+    html, body {
+        overflow-x: hidden;
+    }
+    
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    * {
+        overflow-x: hidden;
+    }
+    
+    section {
+        min-height: auto;
+        padding: 8rem 5%;
+    }
+    
+    .heading {
+        font-size: 3.6rem;
+    }
+    
+    /* ============== Header & Navigation ============== */
+    .header {
+        padding: 1.2rem 5%;
+    }
+    
+    .header.sticky {
+        padding: 1rem 5%;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    #menu-icon {
+        display: block;
+        font-size: 2.8rem;
+        color: var(--text-color);
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: rgba(3, 7, 18, 0.98);
+        backdrop-filter: blur(20px);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    
+    .navbar.active {
+        display: block;
+    }
+    
+    .navbar a {
+        display: block;
+        font-size: 1.8rem;
+        margin: 2.5rem 0;
+    }
+    
+    /* ============== Home Section ============== */
+    .home {
+        padding: 14rem 5% 8rem;
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .home-content {
+        order: 1;
+    }
+    
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    
+    .home-content h1 {
+        font-size: 3.4rem;
+        line-height: 1.2;
+    }
+    
+    .home-content p {
+        font-size: 1.4rem;
+        margin: 2rem 0 2.5rem;
+        line-height: 1.7;
+    }
+    
+    .btn-box {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .btn {
+        width: 14rem;
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+    }
+    
+    .home-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+    }
+    
+    .home-img .img-box {
+        width: 22rem;
+        height: 22rem;
+        padding: 0.5rem;
+        background: transparent !important;
+        box-shadow: 0 0 4rem rgba(14, 165, 233, 0.15);
+    }
+    
+    .home-img .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        background: transparent !important;
+        border: none !important;
+        display: block;
+    }
+    
+    .home-img .img-box::before {
+        inset: -0.8rem;
+    }
+    
+    .home-img .img-box::after {
+        inset: -1.6rem;
+    }
+    
+    /* ============== Home Timeline ============== */
     .lifecycle-container {
         gap: 3rem;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
     
     .lifecycle-item {
@@ -822,15 +959,105 @@ span {
         align-items: center;
         text-align: center;
         gap: 2rem;
+        position: relative;
+        z-index: 2;
     }
     
     .progress-line {
         left: 50%;
         transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .step-indicator {
+        width: 6rem;
+        height: 6rem;
+        min-width: 6rem;
+        z-index: 3;
+        position: relative;
+    }
+    
+    .step-indicator span {
+        font-size: 1.8rem;
     }
     
     .step-content {
-        padding: 2.5rem 2rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    /* ============== Project Detail Timeline ============== */
+    .detail-timeline {
+        padding: 0 1rem;
+    }
+    
+    .detail-timeline .progress-line {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .detail-timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .detail-timeline-dot {
+        width: 5.5rem;
+        height: 5.5rem;
+        min-width: 5.5rem;
+        z-index: 3;
+        position: relative;
+    }
+    
+    .detail-timeline-dot::after {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .detail-timeline-content {
+        padding-top: 0;
+    }
+    
+    /* ============== Projects Grid ============== */
+    .portfolio .portfolio-container {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+    }
+    
+    .portfolio-box {
+        height: auto;
+        min-height: 38rem;
+        padding: 2.5rem;
+    }
+    
+    /* ============== Project Detail Page ============== */
+    .project-detail-section {
+        padding: 10rem 1.5rem 6rem;
+    }
+    
+    .project-detail-title {
+        font-size: 2.8rem !important;
+    }
+    
+    .project-detail-subtitle {
+        font-size: 1.8rem !important;
+    }
+    
+    .project-detail-description {
+        font-size: 1.4rem !important;
+    }
+    
+    .metrics-container.vertical {
+        flex-direction: column;
+    }
+    
+    /* ============== About Section ============== */
+    .about {
+        padding: 8rem 5%;
     }
 }
 
