@@ -1,218 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('style.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
-
+/* Remove redundant global styles that clash with style.css */
 html,
 body {
     overflow-x: hidden;
     width: 100%;
-    position: relative;
 }
 
-:root {
-    --bg-color: #fdfdfd;
-    --text-color: #333;
-    --main-color: #1178B0;
-    --white-color: #fdfdfd;
-    --shadow-color: rgba(0, 0, 0, .2);
-}
-
-*::selection {
-    background: var(--main-color);
-    color: var(--bg-color);
-}
-
-.dark-mode {
-    --bg-color: #0b061f;
-    --text-color: #fdfdfd;
-    --shadow-color: rgba(0, 0, 0, .7);
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-
-/* Header & Navbar */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 7%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    transition: .5s;
-}
-
-.header.sticky {
-    background: var(--bg-color);
-    box-shadow: 0 .1rem 1rem var(--shadow-color);
-}
-
-.logo {
-    font-size: 2.5rem;
-    color: var(--main-color);
-    font-weight: 600;
-    margin-right: auto;
-}
-
-.navbar a {
-    position: relative;
-    font-size: 1.7rem;
-    color: var(--white-color);
-    font-weight: 500;
-    margin-right: 3.5rem;
-}
-
-.header.sticky .navbar a {
-    color: var(--text-color);
-}
-
-.header.sticky .navbar a.active {
-    color: var(--main-color);
-}
-
-.navbar a.active::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: .2rem;
-    background: var(--white-color);
-}
-
-.header.sticky .navbar a::before {
-    background: var(--main-color);
-    opacity: .7;
-}
-
-#darkMode-icon {
-    font-size: 2.4rem;
-    color: var(--white-color);
-    cursor: pointer;
-}
-
-.header.sticky #darkMode-icon {
-    color: var(--text-color);
-    opacity: .9;
-}
-
-#menu-icon {
-    font-size: 3.6rem;
-    color: var(--text-color);
-    display: none;
-}
-
-/* Sections */
 section {
-    min-height: 100vh;
-    padding: 10rem 7% 2rem;
+    min-height: auto;
+    padding: 2rem 7%;
 }
 
 .heading {
-    font-size: 4.5rem;
+    font-size: 3rem;
     text-align: center;
     margin-top: 0;
 }
 
-span {
-    color: var(--main-color);
-}
-
 /* About / Content Section */
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    max-width: 1300px;
+    display: block;
+    max-width: 1000px;
     width: auto;
-    margin: 2rem 2rem;
-    background: var(--bg-color);
-    padding: 1rem 2rem 1rem;
-    border-radius: 2rem;
-    /* box-shadow: 0 .1rem .5rem var(--shadow-color); */
+    margin: 0 auto;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     text-align: left;
-    /* border-top: .6rem solid var(--main-color); */
-    /* border-bottom: .6rem solid var(--main-color); */
     transition: .5s ease;
 }
-
-/* Hover disabled as requested for this page previously, but generic style kept static */
-/* If the user wants hover back, they can uncomment or add it. 
-   For now, strictly matching the "clean" request where animations were minimal. */
 
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
     margin-top: 0;
+    font-size: 3rem;
 }
 
 .about-content h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 0;
 }
 
 .about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 2rem;
+    line-height: 1.6;
+    color: #94a3b8;
 }
 
-.btn {
-    display: inline-block;
-    padding: 1.2rem 2.8rem;
-    background: var(--main-color);
-    border-radius: .6rem;
-    box-shadow: 0 .2rem .5rem var(--shadow-color);
-    font-size: 1.6rem;
-    color: var(--white-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    border: .2rem solid transparent;
-    transition: .5s ease;
-}
-
-.btn:hover {
-    background: transparent;
-    color: var(--main-color);
-    border-color: var(--main-color);
-}
-
-.about .btn {
-    margin: 4rem 0 0 0;
-}
-
-/* Footer */
+/* Footer override to match new sleek style if necessary, but style.css handles it */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 7%;
-    background: var(--main-color);
+    padding: 1.5rem 7%;
+    background: var(--bg-color);
+    border-top: 1px solid var(--glass-border);
 }
 
 .footer-text p {
-    font-size: 1.6rem;
-    color: var(--white-color);
+    font-size: 1.3rem;
+    color: #64748b;
 }
 
 .footer-iconTop a {
