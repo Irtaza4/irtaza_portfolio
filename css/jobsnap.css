@@ -414,11 +414,13 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 0.8rem;
-    background: var(--white-color);
-    border-radius: 0.8rem;
-    border: 0.2rem solid var(--main-color);
-    transition: 0.5s ease;
+    width: 4rem;
+    height: 4rem;
+    background: var(--main-color);
+    border-radius: 1.2rem;
+    font-size: 2rem;
+    color: var(--white-color);
+    transition: 0.3s;
 }
 
 /* ══════════════════════════════
