@@ -216,13 +216,28 @@ if (typeof gsap !== 'undefined') {
     }
 }
 
-/*========== Tilt.js initialization ==========*/
-if (typeof VanillaTilt !== 'undefined') {
+/*========== Tilt.js initialization — desktop only ==========*/
+if (typeof VanillaTilt !== 'undefined' && !('ontouchstart' in window)) {
     VanillaTilt.init(document.querySelectorAll(".services-box, .portfolio-box"), {
         max: 15,
         speed: 400,
         glare: true,
         "max-glare": 0.2,
+    });
+}
+
+/*========== Portfolio cards — tap to reveal on mobile ==========*/
+if ('ontouchstart' in window) {
+    document.querySelectorAll('.portfolio-box').forEach(box => {
+        box.addEventListener('click', function(e) {
+            const alreadyActive = this.classList.contains('touch-active');
+            // close all others
+            document.querySelectorAll('.portfolio-box').forEach(b => b.classList.remove('touch-active'));
+            if (!alreadyActive) {
+                e.preventDefault();
+                this.classList.add('touch-active');
+            }
+        });
     });
 }
 

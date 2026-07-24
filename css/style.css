@@ -1923,9 +1923,7 @@ span {
         text-align: center;
         margin-top: 2rem;
     }
-}
-
-@media (max-width: 365px) {
+}@media (max-width: 365px) {
     .about-img img {
         width: 90vw;
     }
@@ -2040,4 +2038,273 @@ img {
 .about-col-2 .services-box:hover {
     box-shadow: 0 .1rem 2rem var(--shadow-color);
     transform: scale(1.02);
+}
+
+/* ══════════════════════════════════════════════
+   MOBILE-FIRST FIXES
+══════════════════════════════════════════════ */
+
+/* ── Portfolio grid: 1 col on small, 2 on medium ── */
+@media (max-width: 768px) {
+    .portfolio .portfolio-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .portfolio-box {
+        height: 30rem;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .portfolio-box img {
+        max-width: 12rem;
+        height: 12rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 1.6rem;
+    }
+
+    .portfolio-layer p {
+        font-size: 1.1rem;
+        display: none;
+    }
+
+    /* Tap-to-reveal on touch devices */
+    .portfolio-box.touch-active {
+        transform: translateY(-0.5rem);
+        border-color: rgba(14, 165, 233, 0.4);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.4), 0 0 1.5rem var(--accent-glow);
+    }
+
+    .portfolio-box.touch-active .portfolio-layer p {
+        display: block;
+    }
+
+    .portfolio-box.touch-active .case-study-btn {
+        transform: rotate(45deg);
+        background: var(--white-color);
+        color: var(--main-color);
+    }
+}
+
+@media (max-width: 400px) {
+    .portfolio .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-box {
+        height: auto;
+        min-height: 24rem;
+    }
+
+    .portfolio-layer p {
+        display: block;
+    }
+}
+
+/* ── Services grid ── */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .services-box {
+        padding: 2.5rem;
+    }
+
+    .services-box h3 {
+        font-size: 1.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .time-status {
+        font-size: 1.2rem;
+    }
+}
+
+/* ── Skills grid ── */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .skills-box {
+        padding: 2.5rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .skills-box h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-list span {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.4rem;
+    }
+
+    .edu-item h4 {
+        font-size: 1.6rem;
+    }
+
+    .edu-item p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Home section ── */
+@media (max-width: 768px) {
+    .home-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .btn-group {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 1.2rem 2.4rem;
+    }
+}
+
+/* ── About section ── */
+@media (max-width: 768px) {
+    .about {
+        padding: 6rem 5%;
+        gap: 3rem;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .card {
+        padding: 2.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1.4rem;
+    }
+}
+
+/* ── Contact section ── */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact form .input-box {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form {
+        padding: 2.5rem;
+        border-radius: 2rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 1.4rem;
+    }
+
+    .contact-info h3 {
+        font-size: 2.8rem;
+    }
+
+    .contact-bio {
+        font-size: 1.4rem;
+    }
+
+    .contact-card {
+        padding: 2rem;
+    }
+
+    .contact-card span {
+        font-size: 1.6rem;
+    }
+}
+
+/* ── Footer ── */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        padding: 2rem 5%;
+        text-align: center;
+    }
+}
+
+/* ── Lifecycle / Process section ── */
+@media (max-width: 768px) {
+    .lifecycle-container {
+        margin-top: 3rem;
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .step-content p {
+        font-size: 1.3rem;
+    }
+
+    .step-content {
+        padding: 2rem;
+    }
+}
+
+/* ── Heading sizes on small screens ── */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    html {
+        font-size: 50%;
+    }
+}
+
+/* ── Prevent horizontal scroll globally ── */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
