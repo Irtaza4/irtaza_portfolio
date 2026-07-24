@@ -1,7 +1,6 @@
 @import url('style.css');
 
-html,
-body {
+html, body {
     overflow-x: hidden;
     width: 100%;
 }
@@ -12,9 +11,15 @@ section {
 }
 
 .heading {
-    font-size: 3rem;
+    font-size: 3.6rem;
     text-align: left;
     margin-top: 0;
+    margin-bottom: 0.2rem;
+}
+
+/* ── B2B accent color ── */
+.b2b-accent {
+    color: #f5a623 !important;
 }
 
 /* ── About / Content wrapper ── */
@@ -33,26 +38,25 @@ section {
 
 /* ── Project Header ── */
 .project-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
-.project-header .heading {
-    font-size: 4rem;
-    margin-bottom: 0.4rem;
+.project-header-top {
+    margin-bottom: 1.4rem;
 }
 
 .project-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--main-color);
-    margin-bottom: 1.6rem;
     font-weight: 500;
+    margin: 0;
 }
 
 .project-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .meta-tag {
@@ -73,13 +77,32 @@ section {
     background: rgba(74, 222, 128, 0.06);
 }
 
+/* ── Tech Strip ── */
+.tech-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.tech-strip span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    background: rgba(var(--main-color-rgb, 99, 102, 241), 0.1);
+    border: 1px solid rgba(var(--main-color-rgb, 99, 102, 241), 0.25);
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.6rem;
+    letter-spacing: 0.05em;
+}
+
 /* ── Store Links ── */
 .store-links {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 3rem;
-    padding: 1.8rem 2.4rem;
+    margin-bottom: 3.5rem;
+    padding: 2rem 2.4rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 1.2rem;
@@ -129,40 +152,6 @@ section {
 
 .store-btn i {
     font-size: 1.6rem;
-}
-
-/* ── Tech Strip ── */
-.tech-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 3.5rem;
-}
-
-.tech-strip span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--main-color);
-    background: rgba(var(--main-color-rgb, 99, 102, 241), 0.1);
-    border: 1px solid rgba(var(--main-color-rgb, 99, 102, 241), 0.25);
-    padding: 0.4rem 1.2rem;
-    border-radius: 0.6rem;
-    letter-spacing: 0.05em;
-}
-
-/* ── Hero Logo ── */
-.hero-img-container {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0 3.5rem;
-}
-
-.hero-logo {
-    width: 72px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 1.4rem;
-    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 /* ── Project Sections ── */
@@ -231,39 +220,7 @@ section {
     color: var(--text-color);
 }
 
-/* ── Services Grid ── */
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.service-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1.3rem;
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    padding: 0.6rem 1.4rem;
-    border-radius: 2rem;
-    transition: 0.25s;
-}
-
-.service-chip:hover {
-    background: rgba(var(--main-color-rgb, 99, 102, 241), 0.12);
-    border-color: var(--main-color);
-    color: var(--main-color);
-}
-
-.service-chip i {
-    font-size: 1.5rem;
-    color: var(--main-color);
-}
-
-/* ── Why JobSnap Grid ── */
+/* ── Benefits Grid ── */
 .why-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -304,9 +261,8 @@ section {
     line-height: 1.5;
 }
 
-/* ── Timeline ── */
+/* ── Timeline (flexbox, no overlap) ── */
 .detail-timeline {
-    position: relative;
     margin-top: 1rem;
 }
 
@@ -317,7 +273,6 @@ section {
     position: relative;
 }
 
-/* vertical line running through all items */
 .detail-timeline-item::before {
     content: '';
     position: absolute;
@@ -339,7 +294,6 @@ section {
     border-radius: 50%;
     background: var(--main-color);
     margin-top: 0.3rem;
-    box-shadow: 0 0 0 3px rgba(247, 48, 107, 0.15);
     flex-shrink: 0;
 }
 
@@ -368,11 +322,6 @@ section {
     color: #94a3b8;
     margin: 0;
     line-height: 1.6;
-}
-
-/* ── Snap pink color — override style.css .heading span ── */
-.project-header .heading .snap-pink {
-    color: #f7306b !important;
 }
 
 /* ── Carousel heading ── */
@@ -481,6 +430,11 @@ section {
     transition: 0.3s;
 }
 
+.footer-iconTop a:hover {
+    box-shadow: 0 0 2rem var(--accent-glow);
+    transform: translateY(-5px);
+}
+
 /* ══════════════════════════════
    RESPONSIVE
 ══════════════════════════════ */
@@ -514,6 +468,8 @@ section {
     .feature-list { grid-template-columns: 1fr; }
     .why-grid { grid-template-columns: 1fr; }
 
+    .store-links { flex-direction: column; gap: 1.5rem; }
+
     .phone-container { gap: 1.5rem; }
     .phone-mockup { width: 200px; height: 433px; }
     .nav-btn { padding: 1rem; font-size: 2.2rem; }
@@ -530,13 +486,10 @@ section {
 
 @media (max-width: 450px) {
     section { padding: 8rem 5% 2rem !important; }
-    .project-header .heading { font-size: 3rem; }
+    .heading { font-size: 2.8rem; }
     .phone-mockup { width: 180px; height: 390px; }
     .nav-btn { padding: 0.8rem; font-size: 2rem; }
-    .phone-container {
-        gap: 1rem !important;
-        flex-wrap: nowrap !important;
-    }
+    .phone-container { gap: 1rem !important; flex-wrap: nowrap !important; }
     .project-section { padding: 1.8rem; }
 }
 
@@ -544,8 +497,5 @@ section {
     section { padding: 6rem 5% 2rem !important; }
     .phone-mockup { width: 150px; height: 325px; }
     .nav-btn { padding: 0.5rem; font-size: 1.6rem; }
-    .phone-container {
-        gap: 0.5rem !important;
-        flex-wrap: nowrap !important;
-    }
+    .phone-container { gap: 0.5rem !important; flex-wrap: nowrap !important; }
 }
